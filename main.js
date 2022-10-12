@@ -22,7 +22,7 @@ function getarrofDates(){
     arr.push(newdate)
     //console.log(newdate);
   }
-  
+
   var ret = []
 
   for (const x of arr){
@@ -97,6 +97,7 @@ app.get('/abc', (req, res) => res.render('pages/index'))
 
 app.get('/', (req, res) => {
 
+  
   res.send(generateReply())
 
 })
@@ -122,7 +123,7 @@ function generateReply(){
 
   
 
-  let reply = ''
+  let reply = 'LEE JI EUN I LOVE YOU \n <br/>\n <br/>'
 
   Object.keys(data).forEach(function(key) { 
     var datedata = data[key];
