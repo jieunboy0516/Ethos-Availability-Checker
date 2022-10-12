@@ -3,7 +3,7 @@ const https = require('https');
 var data = {}
 
 var intervalId = setInterval(function(){
-  
+
   updateData(getarrofDates())      
 
 }, 1000 * 60 *2);
@@ -86,7 +86,7 @@ updateData(getarrofDates())
 
 const express = require('express')
 const app = express()
-const port = 3000
+const port = process.env.PORT || 5000
 
 app.get('/', (req, res) => {
 
