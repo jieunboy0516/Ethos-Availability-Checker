@@ -60,7 +60,12 @@ function updateData(dates){
       // The whole response has been received. Print out the result.
       resp.on('end', () => {
         //console.log(JSON.parse(_data.toString()))
-        data[date] = JSON.parse(_data.toString())
+        try {
+          JSON.parse(_data.toString())
+          data[date] = JSON.parse(_data.toString())
+        } catch (e) {
+          return  
+        }
         
       });
     
@@ -121,7 +126,7 @@ app.listen(port, () => {
 
 function generateReply(){
 
-  
+  console.log("number of dates in data: " + Object.keys(data).length)
 
   let reply = 'LEE JI EUN I LOVE YOU \n <br/>\n <br/>'
 
