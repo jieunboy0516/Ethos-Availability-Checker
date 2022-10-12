@@ -16,13 +16,13 @@ function getarrofDates(){
 
   var arr = [] 
 
-  for(var i = 5; i < 10; i++){
+  for(var i = 0; i < 15; i++){
     var newdate = new Date();
     newdate.setDate(today.getDate() + i);
     arr.push(newdate)
     //console.log(newdate);
   }
-
+  
   var ret = []
 
   for (const x of arr){
