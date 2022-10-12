@@ -73,8 +73,8 @@ function updateData(dates){
         console.log("Error: " + err.message);
     });
 
-    var waitTill = new Date(new Date().getTime() + 0.5 * 1000);
-    while(waitTill > new Date()){}
+    // var waitTill = new Date(new Date().getTime() + 0.5 * 1000);
+    // while(waitTill > new Date()){}
     
   }
 
@@ -133,6 +133,7 @@ function generateReply(){
   Object.keys(data).forEach(function(key) { 
     var datedata = data[key];
     
+    if(!Array.isArray(datedata)) return;
 
     for (const activity of datedata){
       
@@ -160,3 +161,6 @@ var http = require("http");
 setInterval(function() {
     http.get("https://iu-hate-ethos.herokuapp.com/");
 }, 300000); // every 5 minutes (300000)
+
+
+
