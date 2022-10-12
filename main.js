@@ -95,7 +95,7 @@ app.get('/', (req, res) => {
 
   res.send(generateReply())
 
-  
+
 
 })
 
@@ -129,16 +129,18 @@ function generateReply(){
     for (const activity of datedata){
       
       if(activity.DisplayName.includes("Badminton") && activity.AvailablePlaces > 0){
-        reply += activity.StartTime + "\n"
+        reply += activity.StartTime + "\n <br/>"
       }
       
     }
 
-    reply += "\n\n\n"
+    reply += "\n\n\n <br/><br/><br/>"
 
   });
 
 
   console.log(reply)
+
+  return reply
 }
 
