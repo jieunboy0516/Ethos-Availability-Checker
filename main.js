@@ -43,7 +43,15 @@ function getarrofDates(){
 
 function updateData(dates){
   
-  data = {}
+  //clear list
+  Object.keys(data).forEach(function(key){
+
+    if(!dates.includes(key)) delete data[key];
+
+  })
+
+
+
 
   for (const date of dates){
 
