@@ -6,7 +6,7 @@ var intervalId = setInterval(function(){
 
   updateData(getarrofDates())      
 
-}, 1000 * 60 *2);
+}, 1000 * 15);
 
 
 function getarrofDates(){
