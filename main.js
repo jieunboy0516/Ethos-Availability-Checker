@@ -2,10 +2,11 @@ const https = require('https');
 
 var data = {}
 
-//var intervalId = setInterval(function(){
+var intervalId = setInterval(function(){
+  
   updateData(getarrofDates())      
 
-//}, 2000);
+}, 1000 * 60 *2);
 
 
 function getarrofDates(){
